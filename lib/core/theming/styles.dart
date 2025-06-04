@@ -60,4 +60,9 @@ class TextStyles {
     fontWeight: FontWeightHelper.medium,
     color: ColorsManger.darkBlue,
   );
+  static TextStyle font14GrayRegular = TextStyle(
+    fontSize: 14.sp,
+    fontWeight: FontWeightHelper.normal,
+    color: ColorsManger.gray,
+  );
 }

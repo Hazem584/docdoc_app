@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:learn/features/login/logic/login_cubit.dart';
 import 'package:learn/features/widgets/passowrd_validation.dart';
 
 import '../../../../core/helpers/spacing.dart';
@@ -7,7 +8,6 @@ import '../../../../core/helpers/spacing.dart';
 import '../../core/helpers/app_regex.dart';
 
 import '../../core/widgets/app_text_form_field.dart';
-import '../home/ui/login/logic/login_cubit.dart';
 
 
 class EmailAndPassword extends StatefulWidget {
@@ -97,11 +97,5 @@ class _EmailAndPasswordState extends State<EmailAndPassword> {
         ],
       ),
     );
-  }
-
-  @override
-  void dispose() {
-    passwordController.dispose();
-    super.dispose();
   }
 }
