@@ -2,15 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:learn/core/helpers/spacing.dart';
-import 'package:learn/features/home/ui/login/data/models/login_requset_body.dart';
-import 'package:learn/features/home/ui/login/logic/login_cubit.dart';
-import '../../../../core/theming/styles.dart';
-import '../../../../core/widgets/app_text_button.dart';
-import '../../../../core/widgets/app_text_form_field.dart';
-import '../../../widgets/already_have_account_text.dart';
-import '../../../widgets/email_and_password.dart';
-import '../../../widgets/login_bloc_listner.dart';
-import '../../../widgets/terms_and_conditions_text.dart';
+import 'package:learn/features/login/data/models/login_requset_body.dart';
+import 'package:learn/features/login/logic/login_cubit.dart';
+import '../../core/theming/styles.dart';
+import '../../core/widgets/app_text_button.dart';
+import '../widgets/already_have_account_text.dart';
+import '../widgets/email_and_password.dart';
+import '../widgets/login_bloc_listner.dart';
+import '../widgets/terms_and_conditions_text.dart';
 
 class LoginScreen extends StatelessWidget {
   const LoginScreen({super.key});
@@ -55,7 +54,7 @@ class LoginScreen extends StatelessWidget {
                     TermsAndConditionsText(),
                     verticalSpace(60),
                     DontHaveAccountText(),
-                    LoginBlocListenner(),
+                    LoginBlocListener(),
                   ],
                 ),
               ],
