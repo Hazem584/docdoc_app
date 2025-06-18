@@ -20,7 +20,7 @@ val flutterVersionName = localProperties.getProperty("flutter.versionName") ?: "
 android {
     namespace = "com.example.flutter_complete_project"
     compileSdk = flutter.compileSdkVersion
-    ndkVersion = flutter.ndkVersion
+    ndkVersion = "27.0.12077973"
 
     defaultConfig {
         applicationId = "com.example.flutter_complete_project"
@@ -46,6 +46,7 @@ android {
     productFlavors {
         create("production") {
             dimension = "default"
+            applicationId = "com.example.learn"
             resValue("string", "app_name", "DocDoc Production")
         }
         create("development") {
