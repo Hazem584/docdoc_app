@@ -75,4 +75,9 @@ class TextStyles {
     fontWeight: FontWeightHelper.normal,
     color: ColorsManger.lighterDark,
   );
+  static TextStyle font18WhiteMedium = TextStyle(
+    fontSize: 18.sp,
+    fontWeight: FontWeightHelper.medium,
+    color: Colors.white,
+  );
 }
