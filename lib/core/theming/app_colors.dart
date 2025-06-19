@@ -10,4 +10,6 @@ class ColorsManger {
   static const Color secondary = Color(0xFF03DAC6);
   static const Color secondaryVariant = Color(0xFF018786);
   static const Color background = Color(0xFFFFF5F5);
+  static const Color lighterDark = Color(0xFF5F5F5F);
+  static const Color lighterDarkGray = Color(0xFFF5F5F5);
 }

@@ -18,25 +18,21 @@ val flutterVersionCode = localProperties.getProperty("flutter.versionCode")?.toI
 val flutterVersionName = localProperties.getProperty("flutter.versionName") ?: "1.0"
 
 android {
-    namespace = "com.example.flutter_complete_project"
-    compileSdk = flutter.compileSdkVersion
+    namespace = "com.example.learn"
+    compileSdk = 35
     ndkVersion = "27.0.12077973"
 
     defaultConfig {
-        applicationId = "com.example.flutter_complete_project"
-        minSdk = flutter.minSdkVersion
-        targetSdk = flutter.targetSdkVersion
+        applicationId = "com.example.learn"
+        minSdk = 21
+        targetSdk = 35
         versionCode = flutterVersionCode
         versionName = flutterVersionName
     }
 
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_1_8
-        targetCompatibility = JavaVersion.VERSION_1_8
-    }
-
-    kotlinOptions {
-        jvmTarget = "1.8"
+        sourceCompatibility = JavaVersion.VERSION_11
+        targetCompatibility = JavaVersion.VERSION_11
     }
 
     sourceSets["main"].java.srcDirs("src/main/kotlin")
@@ -58,7 +54,7 @@ android {
 
     buildTypes {
         getByName("release") {
-            signingConfig = signingConfigs.getByName("debug") // Replace with release signing if available
+            signingConfig = signingConfigs.getByName("debug")
         }
     }
 }
@@ -67,6 +63,9 @@ flutter {
     source = "../.."
 }
 
-dependencies {
-    // Add your dependencies here if needed
+// ✅ هذا مهم لتوحيد إصدار JVM بين Java و Kotlin
+tasks.withType<org.jetbrains.kotlin.gradle.tasks.KotlinCompile> {
+    kotlinOptions {
+        jvmTarget = "11"
+    }
 }

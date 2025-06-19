@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:learn/core/helpers/extensions.dart';
 import 'package:learn/core/helpers/spacing.dart';
+import 'package:learn/core/routing/routes.dart';
 import 'package:learn/features/login/data/models/login_requset_body.dart';
 import 'package:learn/features/login/logic/login_cubit.dart';
 import '../../core/theming/styles.dart';
@@ -47,7 +49,10 @@ class LoginScreen extends StatelessWidget {
                       buttonText: "Login",
                       textStyle: TextStyles.font16WhiteMedium,
                       onPressed: () {
-                        validateThenDoLogin(context);
+                        // validateThenDoLogin(context);
+                        context.pushNamed(
+                          Routes.homeScreen,
+                        );
                       },
                     ),
                     verticalSpace(23),
