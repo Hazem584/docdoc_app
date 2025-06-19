@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:learn/core/theming/styles.dart';
 
 class DoctorsSpecialitySeeAll extends StatelessWidget {
   const DoctorsSpecialitySeeAll({super.key});
@@ -9,16 +10,14 @@ class DoctorsSpecialitySeeAll extends StatelessWidget {
       children: [
         Text(
           "Doctors Speciality",
-          style: Te
+          style: TextStyles.font18DarkBlueSemiBold
         ),
         const Spacer(),
         TextButton(
           onPressed: () {},
           child: Text(
             "See All",
-            style: Theme.of(context).textTheme.subtitle1?.copyWith(
-                  color: Colors.blue,
-                ),
+            style: TextStyles.font12BlueRegular,
           ),
         ),
       ],
