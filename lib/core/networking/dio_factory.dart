@@ -16,13 +16,19 @@ class DioFactory {
       dio!
         ..options.connectTimeout = timeOut
         ..options.receiveTimeout = timeOut;
+      addDioHeaders();
       addDioInterceptor();
       return dio!;
     } else {
       return dio!;
     }
   }
-
+static void addDioHeaders() {
+    dio?.options.headers.addAll({
+      'Accept': 'application/json',
+      'Authorization': 'Bearer YOUR',
+    });
+  }
 
   static void addDioInterceptor() {
     dio?.interceptors.add(
