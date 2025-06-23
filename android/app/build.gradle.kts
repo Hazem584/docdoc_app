@@ -23,7 +23,7 @@ android {
     ndkVersion = "27.0.12077973"
 
     defaultConfig {
-        applicationId = "com.example.learn"
+        applicationId = "com.example.docapp"
         minSdk = 21
         targetSdk = 35
         versionCode = flutterVersionCode

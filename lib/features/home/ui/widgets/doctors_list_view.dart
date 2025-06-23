@@ -11,15 +11,13 @@ class DoctorsListView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Expanded(
-        child: ListView.builder(
-          itemCount: doctorsList?.length, // Example count, replace with actual data length
-            itemBuilder: (context, index) {
-              return DoctorsListViewItem(
-                doctorsModel: doctorsList?[index],
-              );
-            },
-        )
+    return ListView.builder(
+      itemCount: doctorsList?.length, // Example count, replace with actual data length
+        itemBuilder: (context, index) {
+          return DoctorsListViewItem(
+            doctorsModel: doctorsList?[index],
+          );
+        },
     );
   }
 }

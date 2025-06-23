@@ -41,20 +41,21 @@ class SpecializationsAndDoctorsBlocBuilder extends StatelessWidget {
     );
   }
   Widget setupSuccessState(specializationsList) {
-    return Expanded(
-      child: Column(
-        children: [
-          DoctorSpecialityListView(
-            specializationsDataList: specializationsList ??[],
+    return Column(
+      children: [
+        DoctorSpecialityListView(
+          specializationsDataList: specializationsList ?? [],
+        ),
+        verticalSpace(8),
+        Expanded(
+          child: DoctorsListView(
+            doctorsList: specializationsList?[0]?.doctorsList ?? [],
           ),
-          verticalSpace(8),
-          DoctorsListView(
-            doctorsList: specializationsList?[0]?.doctorsList,
-          ),
-        ],
-      ),
+        ),
+      ],
     );
   }
+
   Widget setupErrorState() {
     return const SizedBox.shrink();
   }

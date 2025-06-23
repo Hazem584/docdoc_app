@@ -49,10 +49,7 @@ class LoginScreen extends StatelessWidget {
                       buttonText: "Login",
                       textStyle: TextStyles.font16WhiteMedium,
                       onPressed: () {
-                        // validateThenDoLogin(context);
-                        context.pushNamed(
-                          Routes.homeScreen,
-                        );
+                         validateThenDoLogin(context);
                       },
                     ),
                     verticalSpace(23),
